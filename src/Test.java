@@ -22,14 +22,14 @@ public class Test {
     
     static String TabMul(int NumTab){
         String res="";
-        for (int i = 1; i <= NumTab; i++) {
-            res+= NumTab +" * "+ i +" = "+ (NumTab*i);
+        for (int i = 1; i < 11; i++) {
+            res+= NumTab +" * "+ i +" = "+ (NumTab*i)+"\n";
         }
-        return res;
+        return "Tabla del "+NumTab+"\n"+res;
     }
     
     public static void main(String[]args){
-        Tools.imprimir("La suma de los numeros es: "+SumDosNum(Tools.LeerInt("Ingresa un numero"),Tools.LeerInt("Ingresa otro numero")));
+        //Tools.imprimir("La suma de los numeros es: "+SumDosNum(Tools.LeerInt("Ingresa un numero"),Tools.LeerInt("Ingresa otro numero")));
         Tools.imprimir(TabMul(Tools.LeerInt("Ingresa el numero de la tabla que quieras")));
     }
 }
