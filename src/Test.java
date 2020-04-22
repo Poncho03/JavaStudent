@@ -29,16 +29,14 @@ public class Test {
     }
     
     static int[][] CreaMatriz(){
-        int [][] mat = new int[3][3];
-        mat[0][0] = 1;
-        mat[0][1] = 2;
-        mat[0][2] = 3;
-        mat[1][0] = 4;
-        mat[1][1] = 5;
-        mat[1][2] = 6;
-        mat[2][0] = 7;
-        mat[2][1] = 8;
-        mat[2][2] = 9;
+        int col = Tools.LeerInt("Cuantas columnas");
+        int fil = Tools.LeerInt("Cuantas filas");
+        int [][] mat = new int[fil][col];
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                mat[i][j] = Tools.LeerInt("Ingresa un numero");
+            }
+        }
         return mat;
     }
     
@@ -66,6 +64,6 @@ public class Test {
         //Tools.imprimir("La suma de los numeros es: "+SumDosNum(Tools.LeerInt("Ingresa un numero"),Tools.LeerInt("Ingresa otro numero")));
         //Tools.imprimir(TabMul(Tools.LeerInt("Ingresa el numero de la tabla que quieras")));
         //ImpMat(CreaMatriz());
-        //ImpMatWin(CreaMatriz());
+        ImpMatWin(CreaMatriz());
     }
 }
